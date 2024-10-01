@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/chat_lieu")
-@CrossOrigin(origins = "http://127.0.0.1:5502")
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class ChatLieuController {
     @Autowired
     private ChatLieuService ChatLieuService;

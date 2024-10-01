@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/kich_thuoc")
-@CrossOrigin(origins = "http://127.0.0.1:5502")
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class KichThuocController {
     @Autowired
     private KichThuocService kichThuocService;

@@ -23,6 +23,9 @@ public interface SanPhamRepository extends JpaRepository<SanPham, Integer> {
             "    san_pham_chi_tiet sct ON sp.Id_san_pham = sct.id_san_pham;\n",
             nativeQuery = true)
     List<Object[]> getAllSanPham();
-
+    @Query(value = "SELECT sp.Id_san_pham, sp.ten_san_pham, sp.mo_ta, sp.gia_ban, ha.url_anh " +
+            "FROM san_pham sp " +
+            "JOIN hinh_anh_san_pham ha ON sp.Id_san_pham = ha.id_san_pham", nativeQuery = true)
+    List<Object[]> getAll();
 
 }

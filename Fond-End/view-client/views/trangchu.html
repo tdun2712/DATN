@@ -58,79 +58,14 @@
 
             <div class="menu-container">
                 <!-- 4 sản phẩm cũ -->
-                <div class="menu-item">
-                    <image src="/image/p18.jpg" alt="Áo Phông " class="menu-image">
-                        <h3 class="menu-name">Áo Phông</h3>
-                        <p class="menu-price">120.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-                <div class="menu-item">
-                    <image src="/image/p13.jpg" alt="Áo Sơ Mi" class="menu-image">
-                        <h3 class="menu-name">Áo Sơ Mi</h3>
-                        <p class="menu-price">120.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-                <div class="menu-item">
-                    <image src="/image/p8.jpg" alt="" class="menu-image">
-                        <h3 class="menu-name">Áo Phao</h3>
-                        <p class="menu-price">300.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-                <div class="menu-item">
-                    <image src="/image/p24.jpg" alt="" class="menu-image">
-                        <h3 class="menu-name">Áo Phông</h3>
-                        <p class="menu-price">100.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-
-                <!-- 4 sản phẩm mới -->
-                <div class="menu-item">
-                    <image src="/image/p18.jpg" alt="Áo Phông " class="menu-image">
-                        <h3 class="menu-name">Áo Phông</h3>
-                        <p class="menu-price">120.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-                <div class="menu-item">
-                    <image src="/image/p13.jpg" alt="Áo Sơ Mi" class="menu-image">
-                        <h3 class="menu-name">Áo Sơ Mi</h3>
-                        <p class="menu-price">120.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-                <div class="menu-item">
-                    <image src="/image/p8.jpg" alt="" class="menu-image">
-                        <h3 class="menu-name">Áo Phao</h3>
-                        <p class="menu-price">300.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
-                </div>
-                <div class="menu-item">
-                    <image src="/image/p24.jpg" alt="" class="menu-image">
-                        <h3 class="menu-name">Áo Phông</h3>
-                        <p class="menu-price">100.000 đ</p>
-                        <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
-                        </button>
+                <div class="menu-item" ng-repeat="item in products">
+                    <image ng-src="{{item.urlAnh}}" alt="image" class="menu-image">
+                    <h3 class="menu-name"><strong>{{item.tenSanPham}}</strong></h3> <!-- In đậm bằng <strong> -->
+                    <p class="menu-description"><span style="font-size: 90%">{{item.moTa}}</span></p> <!-- Mô tả to hơn <small> -->
+                    <p class="menu-price">{{item.giaBan}}</p>
+                    <button class="order-btn" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-cart-shopping"></i> ĐẶT HÀNG
+                    </button>
                 </div>
             </div>
         </div>
